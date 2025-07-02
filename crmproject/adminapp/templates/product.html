@@ -1,0 +1,59 @@
+{% extends "adminparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">Product Home</h1>
+            {% if msg %}   
+            <p style="text-align: center; color: beige;">{{msg}}</p>
+            {% endif %}
+            <form class="from-group" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="table text-light" style="width: 60px; margin: auto;">
+                <tr>
+                    <td>Enter the product name </td>
+                    <td>
+                        <input type="text" name="productname" class="form-control text-light" required>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>enter the mfg date  </td>
+                    <td>
+                        <input type="date" name="mfgdate" class="form-control text-light" required/>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>enter the exp date  </td>
+                    <td>
+                        <input type="date" name="expdate" class="form-control text-light" required/>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>enter the price   </td>
+                    <td>
+                        <input type="text" name="price" class="form-control text-light" required/>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>upload product  </td>
+                    <td>
+                        <input type="file" name="productpic" class="form-control text-light" required/>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td>
+                        <button type="submit" class="btn btn-success"> Add the Product</button>
+                        
+                    </td>
+                </tr>
+                </table>
+            </form>
+              
+        </div>
+    </div>
+{% endblock body %}

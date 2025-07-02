@@ -1,0 +1,56 @@
+{% extends "parent.html" %}
+{% block body %}
+<h1 style="color: blue; text-align: center;">Enquiry Form</h1>
+{% if msg %}
+<p style="text-align: center; color: blue;">{{msg}}</p>
+{% endif %}
+<form class="form-group mt-5" method="post">
+    {% csrf_token %}
+    <table class="table" style="margin: auto;">
+        <tr>
+            <td>Enter Name</td>
+            <td><input type="text" name="name" placeholder="Enter name" required class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Enter contact no.</td>
+            <td><input type="number" name="contactno" placeholder="Enter contact number" required
+                    class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Enter E-mail address</td>
+            <td><input type="text" name="emailaddress" placeholder="Enter email address" required
+                    class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Enter Subject</td>
+            <td><input type="text" name="subject" placeholder="Enter subject" required class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Enter Message</td>
+            <td><textarea name="message" class="form-control"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" class="btn btn-primary">Submit</button></td>
+        </tr>
+    </table>
+</form>
+         <!--map -->
+        <div class="row my-3 px-5">
+            <section class="mapbox" data-mapbox>
+                <figure>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.7045992846597!2d81.0120681748939!3d26.881124861448374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3882d1fa90b%3A0x1da981f6aa0bdea3!2spathanbhai!5e0!3m2!1sen!2sin!4v1710615607755!5m2!1sen!2sin"
+                        width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </figure>
+            </section>
+        </div>
+        <!-- map close--->
+    
+
+ 
+
+
+</div>
+{% endblock body %}

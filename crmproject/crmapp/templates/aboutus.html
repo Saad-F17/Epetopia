@@ -1,0 +1,27 @@
+{% extends "parent.html" %}
+
+{% block body %}
+{% load static %}
+
+<h1   style="color: blue; text-align: center;"> About Us </h1>
+
+<video playsinline="playsinline" loop="loop" autoplay="autoplay" muted="muted" preload="metadata" poster="//supertails.com/cdn/shop/files/preview_images/9ecdbf0748ce46608966d4d74beb1fa3.thumbnail.0000000000_small.jpg?v=1711535867"><source src="https://cdn.shopify.com/videos/c/vp/9ecdbf0748ce46608966d4d74beb1fa3/9ecdbf0748ce46608966d4d74beb1fa3.SD-480p-1.0Mbps-26403325.mp4" type="video/mp4"><img src="//supertails.com/cdn/shop/files/preview_images/9ecdbf0748ce46608966d4d74beb1fa3.thumbnail.0000000000_small.jpg?v=1711535867"></video>
+
+
+<div class="row my-5 mt-5">
+    <div class="col-sm-6 text-center">
+        <div class="section  "> <a href="{% url 'crmapp:cat' %}"> <img src="{% static 'images/ahmad.jpg' %}" class="rounded-circle circle-image" alt="" height="400px" width="400px">
+            </a> </div> <button type="button" class="btn btn-info mt-2"> <a
+                href="https://expomx.in/dog-and-cat-shop#8a41ffcb-8b2c-41bb-87a6-11cc20f0ec28"
+                class="link-underline link-underline-opacity-0 text-white"> MOHD AHMAD RAZA</a> </button>
+    </div>
+    
+    <div class="col-sm-6 text-center">
+        <div class="section"> <img src="{% static 'images/saad.jpg' %}" alt="" class="rounded-circle circle-image" alt="" height="400px" width="400px"> </div> <button type="button"
+            class="btn btn-info mt-2"><a href="https://expomx.in/shop/ols/categories/parrot-bird-group"
+                class="link-underline link-underline-opacity-0 text-white">SAAD FAISAL</a></button>
+    </div>
+    
+</div>
+{% endblock body %}
+

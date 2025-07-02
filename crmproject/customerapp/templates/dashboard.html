@@ -1,0 +1,103 @@
+{% extends "customerparent.html" %}
+{% block body %}
+{% load static %}
+<h1 style="color: blue; text-align: center;">CAT PRODUCTS</h1>
+
+<div class="w3-content" style="max-width:800px; margin-left: 100px;">
+    <img class="mySlides" src="{% static 'images/slprod.webp' %}" style="width:1000px">
+    <img class="mySlides" src="{% static 'images/slprod1.webp' %}" style="width:1000px">
+    <img class="mySlides" src="{% static 'images/slprod2.webp' %}" style="width:1000px">
+    <img class="mySlides" src="{% static 'images/slprod3.webp' %}" style="width:1000px">
+    <img class="mySlides" src="{% static 'images/slprod4.webp' %}" style="width:1000px">
+    <img class="mySlides" src="{% static 'images/slprod5.webp' %}" style="width:1000px">
+  </div>
+  
+  <div class="w3-center mt-2">
+    <div class="w3-section text-center">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+   
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-red", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " w3-red";
+  }
+  </script>
+
+
+
+<!---product --->
+
+<div class="row my-5">
+	<div class="col-sm text-center ">
+	<div class=""> <a href="{% url 'customerapp:food1' %}"><img src="{% static 'images/aa1.webp' %}" alt="" height="300px"> </a>	</div>	</div>
+	<div class="col-sm text-center">
+	<div class="">	<a href="{% url 'customerapp:food' %}"><img src="{% static 'images/aa2.webp' %}" alt="" height="300px">	</a></div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> <a href="{% url 'customerapp:kid' %}"><img src="{% static 'images/aa3.webp' %}" alt="" height="300px"> </a>	</div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> <a href="{% url 'customerapp:food2' %}"><img src="{% static 'images/aa4.webp' %}" alt="" height="300px"></a>	</div>	</div>
+</div>
+
+<div class="row my-5">
+
+	<div class="col-sm text-center ">
+	<div class=""> <a href="{% url 'customerapp:kid1' %}"> <img src="{% static 'images/ab1.webp' %}" alt="" height="300px">	</a></div>	</div>
+	<div class="col-sm text-center">
+	<div class="">	<a href="{% url 'customerapp:kid2' %}"><img src="{% static 'images/ab2.webp' %}" alt="" height="300px">	</a></div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> 	<a href="{% url 'customerapp:kid3' %}"><img src="{% static 'images/ab3.webp' %}" alt="" height="300px">	</a></div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> 	<a href="{% url 'customerapp:kid4' %}"><img src="{% static 'images/ab4.webp' %}" alt="" height="300px">	</a></div>	</div>
+</div>
+
+<div class="row my-5">
+
+	<div class="col-sm text-center ">
+	<div class=""> <a href="{% url 'customerapp:food3' %}"> <img src="{% static 'images/ac1.webp' %}" alt="" height="300px">	</a></div>	</div>
+	<div class="col-sm text-center">
+	<div class="">	<a href="{% url 'customerapp:food4' %}"><img src="{% static 'images/ac2.webp' %}" alt="" height="300px">	</a> </div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> 	<a href="{% url 'customerapp:food5' %}"><img src="{% static 'images/ac3.webp' %}" alt="" height="300px">	</a> </div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> <a href="{% url 'customerapp:food6' %}">	<img src="{% static 'images/ac4.webp' %}" alt="" height="300px"></a>	</div>	</div>
+</div>
+
+<div class="row my-5">
+
+	<div class="col-sm text-center ">
+	<div class=""> <a href="{% url 'customerapp:kid5' %}"><img src="{% static 'images/ad1.webp' %}" alt="" height="300px"></a>	</div>	</div>
+	<div class="col-sm text-center">
+	<div class="">	<a href="{% url 'customerapp:kid6' %}"><img src="{% static 'images/ad2.webp' %}" alt="" height="300px">	</a></div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> <a href="{% url 'customerapp:kid7' %}">	<img src="{% static 'images/ad3.webp' %}" alt="" height="300px"></a>	</div>	</div>
+	<div class="col-sm text-center">
+	<div class=""> 	<a href="{% url 'customerapp:kid7' %}"><img src="{% static 'images/ad4.webp' %}" alt="" height="300px">	</a></div>	</div>
+</div>
+
+{% endblock body %}

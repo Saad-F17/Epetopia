@@ -1,0 +1,192 @@
+{% extends "parent.html" %}
+{% block body %}
+{% load static %}
+<h1 style="color: blue; text-align: center;">Pet Adoption</h1>
+<div class="row my-5 mt-5">
+    <div class="col-sm-3 text-center">
+        <div class="section  "> <a href="{% url 'crmapp:cat' %}"> <img src="{% static 'images/cats.avif' %}" class="rounded-circle circle-image" alt="" height="200px" width="200px">
+            </a> </div> <button type="button" class="btn btn-info mt-2"> <a
+                href="https://expomx.in/dog-and-cat-shop#8a41ffcb-8b2c-41bb-87a6-11cc20f0ec28"
+                class="link-underline link-underline-opacity-0 text-white"> Cats</a> </button>
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="section"> <a href="{% url 'crmapp:dogs' %}"> <img src="{% static 'images/dogs.jpg' %}" class="rounded-circle circle-image" alt="" height="200px" width="200px"alt=""></a> </div> <button type="button"
+            class="btn btn-info mt-2"><a href="https://expomx.in/dog-and-cat-shop#8a41ffcb-8b2c-41bb-87a6-11cc20f0ec28"
+                class="link-underline link-underline-opacity-0 text-white">Dogs</a></button>
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="section"> <img src="{% static 'images/birds.jpg' %}" alt="" class="rounded-circle circle-image" alt="" height="200px" width="200px"> </div> <button type="button"
+            class="btn btn-info mt-2"><a href="https://expomx.in/shop/ols/categories/parrot-bird-group"
+                class="link-underline link-underline-opacity-0 text-white">Birds</a></button>
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="section"> <img src="{% static 'images/Fishes.jpg' %}" alt="" class="rounded-circle circle-image" alt="" height="200px" width="200px"> </div> <button type="button"
+            class="btn btn-info mt-2"><a href="https://expomx.in/online-aquarium-shop"
+                class="link-underline link-underline-opacity-0 text-white">Fishes</a></button>
+    </div>
+</div>
+
+
+<div class="row ">
+    <a href="{% url 'crmapp:registration' %}">
+    <div class="mt-5 rounded ">
+        <div class="scroll-container">
+            <img src="{% static 'images/aboutimg.webp' %} " alt="Cinque Terre"  height="300">
+            <img src="{% static 'images/aboutimg1.webp' %}" alt="" height="300" alt="Forest">
+            <img src="{% static 'images/aboutimg2.webp' %}" alt="" height="300" alt="Northern Lights">
+            <img src="{% static 'images/aboutimg3.webp' %}" alt="" height="300" alt="Mountains">
+            <img src="{% static 'images/aboutimg4.webp' %}" alt="Cinque Terre"  height="300">
+            <img src="{% static 'images/aboutimg5.webp' %}" alt="" height="300" alt="Forest">
+            <img src="{% static 'images/aboutimg6.webp' %}" alt="" height="300" alt="Northern Lights">
+            <img src="{% static 'images/aboutimg7.webp' %}" alt="" height="300" alt="Mountains">
+          </div></a>
+</div>
+
+<!---product --->
+
+
+<div class="row mt-5">
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/catfood.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rs .578/1kg</h5>
+                <p class="fw-bold">Grain Zero </p>
+                <small class="card-text d-block ">Signature Grain Zero Persian And Long Coat Dry Cat Food for
+                    persians and long-coat cats.</small>
+                <div>
+                    <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                    <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/dogfood.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rs .648/1kg</h5>
+                <p class="fw-bold"> Pedigree </p>
+                <small class="card-text d-block">Pedigree Puppy Dry Dog Food, Chicken & Milk. Hypoallergenic
+                    complete nutrition</small>
+                    <div>
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/birdfood.jpg' %}" class="card-img-top" alt="..." height="285px">
+            <div class="card-body">
+                <h5 class="card-title">Rs .189/1kg</h5>
+                <p class="fw-bold"> Budgies Food </p>
+                <small class="card-text d-block">Natural & Healthy Premium Mix Seeds, | Daily Bird Budgies Food
+                    Seeds| All Life Stages.</small>
+                    <div>
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/fishfood.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rs . 249/500g</h5>
+                <p class="fw-bold"> Fish Food </p>
+                <small class="card-text d-block">Tunai Tropical Fish Food for Aquarium with 26% Protein Perfect
+                    for Adult Small & Medium Fish</small>
+                    <div>
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row mt-5">
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/dogcollar.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rs .254/4p</h5>
+                <p class="fw-bold"> Dog collar </p>
+                <small class="card-text d-block">Agirav Reflective Dog Collar for Small, Medium, Large Dogs,
+                    Super Light Weight Collars</small>
+                    <div>
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/cattoys.jpg' %}" class="card-img-top" alt="..." height="260px">
+            <div class="card-body">
+                <h5 class="card-title">Rs .399/p</h5>
+                <p class="fw-bold"> Cat toys </p>
+                <small class="card-text d-block">RvPaws Mouse Pieces Cats Mouse Plush Cat Toys Realistic Cute
+                    Kitten Mice Filled Polyfill Rat for Cat.</small>
+                    <div>
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/fishbowl.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rs .295/p</h5>
+                <p class="fw-bold"> Fish bowl </p>
+                <small class="card-text d-block">URBAN MOON Crystal Clear Zig Zag Neck Bowl Aquarium, Round
+                    Collar Vase, Fish Pot for Home .</small>
+                    <div>
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+
+        <div class="card">
+            <img src="{% static 'images/birdcage.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rs . 380/p</h5>
+                <p class="fw-bold"> Bird cage </p>
+                <small class="card-text d-block">PAWING Bird Cage, House for Small Bird with 1 Perch and 1 Swing
+                    and Secure Lock (Blue).</small>
+                    <div>
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info text-white ">Add to Card </a> 
+                        <a href="{% url 'crmapp:registration' %}" class="btn btn-info float-end text-white">Buy Now</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}

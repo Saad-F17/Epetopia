@@ -1,0 +1,35 @@
+{% extends "adminparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 style="text-align:center;">View feedback Page</h1>   
+              <table class="table text-light table-bordered">
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>contact no</th>
+                        <th>email address</th>
+                        <th>subject</th>
+                        <th>feedback</th>
+                        <th>posted date </th>
+                        <th>delete</th>
+                    </tr>
+                    <tr>
+            
+                    {% for f in feed %}
+                    <td>{{f.id}}</td>
+                    <td>{{f.name}}</td>
+                    <td>{{f.contactno}}</td>
+                    <td>{{f.emailaddress}}</td>
+                    <td>{{f.subject}}</td>
+                    <td>{{f.responsetext}}</td>
+                    <td>{{f.posteddate}}</td>
+                    <td> 
+                        <a href="{% url 'adminapp:delfeed' id=f.id  %}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                    </tr>
+                    {% endfor %}
+              </table>
+        </div>
+    </div>
+{% endblock body %}

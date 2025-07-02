@@ -1,0 +1,68 @@
+{% extends "parent.html" %}
+
+{% block body %}
+<h1 style="color: blue; text-align: center;">Customer  Registration form</h1>
+
+{% if msg %}
+<p style=" text-align: center; color: blue;">{{msg}}</p>
+{% endif %}
+
+<form class="form-group" method="post" >
+    {% csrf_token %}
+    <table class="table mt-5" style="margin:auto;">
+        <tr>
+            <td> Enter Name</td>
+            <td>
+                <input type="text" name="name" class="form-control" placeholder="Enter name"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Select Gender</td>
+            <td>
+                <input type="radio" name="gender" value="male" class="form-check-input"/>Male
+                <input type="radio" name="gender" value="female" class="form-check-input"/>Female
+            </td>
+        </tr>
+        <tr>
+            <td> Enter the Address</td>
+            <td>
+                <textarea name="address" class="form-control" required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td> Enter Contactno</td>
+            <td>
+                <input name="contactno" type="number" placeholder="Enter the Number" required class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <td> Enter Email Address</td>
+            <td>
+                <input name="emailaddress" type="email" placeholder="Enter the Email" required class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <td> Enter Password</td>
+            <td>
+                <input name="password" type="password" placeholder="Enter the password" required class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <td> Enter Confirm Password</td>
+            <td>
+                <input name="confirmpassword" type="password" placeholder="Enter the confirm password" required class="form-control"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> </td>
+            <td>
+                <input type="submit" value="Submit" class="btn btn-primary" name="submit">
+            </td>
+        </tr>
+        
+    </table>
+
+</form>
+{% endblock %}
+812
